@@ -123,19 +123,131 @@ section img#mountains_front {
     transform: translateY(100px);
 }
 
+
 .sec{
     position: relative;
     padding:100px;
     background: #1c0522;
+ 
 }
 
-.sec h2{
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    color:#fff
+.sec h2{ 
+font-size: 3.5em;
+    margin-bottom: 70px;
+    color: blueviolet;
+    text-align: center;
 }
+
 
 .sec p {
-    font-size: 1em;
-    color: #fff
+    font-size: 1.2em;
+color: rgb(155, 126, 172);
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    gap:100px;
+    margin-right:70px;
+    padding: 20px;
+   
+}
+
+.about img{
+    background:transparent;
+    border-radius: 30px;
+}
+
+.intro{
+    line-height: 30px;
+}
+
+.intro span{
+    color: blueviolet;
+}
+
+.intro ul{
+    list-style: none;
+}
+
+.intro li {
+    color: rgb(155, 126, 172);
+    padding-left: 30px;
+    font-size: large;
+
+  
+}
+.intro li::before{
+padding-left: 30px;
+content: "\👉";
+font-size: larger;
+    margin: 20px;
+}
+
+.str{
+    text-align: center;
+    margin: 35px;
+}
+
+.str p{
+    color:#674386;
+}
+
+.arti{
+    background:#1c0522;
+}
+
+
+.arti h1{
+    text-align: center;
+    font-size:50px;
+    color: blueviolet;
+    margin-bottom: 100px;
+}
+
+.arti h1 span{
+    color:white
+}
+
+  .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      flex-wrap: wrap;
+      gap: 30px;
+     
+  }
+
+.logo-container img {
+  height: 150px;
+  width: 150px;
+  border: 2px solid blueviolet;
+  border-radius: 50%;
+  margin: 10px 50px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.logo-container img:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.logo-container img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  border: 2px solid blueviolet;
 }

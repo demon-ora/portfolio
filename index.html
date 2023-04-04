@@ -26,52 +26,39 @@
         <img src="mountains_front.png" alt="mountains_front" id="mountains_front">
     </section>
 <div class="sec" id="sec">
-<h2>Parallax Scrolling Effect</h2>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis 
-    doloremque, culpa sed fugit animi illo, nulla dolore
-     aspernatur dolorum voluptatum nemo quidem ipsa 
-     consequatur perspiciatis repellat unde, eaque totam!
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-    doloremque, culpa sed fugit animi illo, nulla dolore
-    aspernatur dolorum voluptatum nemo quidem ipsa<br>
-    consequatur perspiciatis repellat unde, eaque totam!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa
-consequatur perspiciatis repellat unde, eaque totam
-aspernatur dolorum voluptatum nemo quidem ipsa
-consequatur perspiciatis repellat unde, eaque totam!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa<br>
-consequatur perspiciatis repellat unde, eaque totam!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa
-consequatur perspiciatis repellat unde, eaque totam 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa
-consequatur perspiciatis repellat unde, eaque totam!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa<br>
-consequatur perspiciatis repellat unde, eaque totam!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa
-consequatur perspiciatis repellat unde, eaque totam
-aspernatur dolorum voluptatum nemo quidem ipsa
-consequatur perspiciatis repellat unde, eaque totam!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa<br>
-consequatur perspiciatis repellat unde, eaque totam!
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia perferendis
-doloremque, culpa sed fugit animi illo, nulla dolore
-aspernatur dolorum voluptatum nemo quidem ipsa
-consequatur perspiciatis repellat unde, eaque totam </p>
+      <h2 >About Me</h2>
+      <div class="about">
+<div class="intro">
+<p>Hi Everyone, I am <span>Celon Maharjan</span> from <span>Lalitpur,Nepal</span> I am a junior developer pursing BCA in Patan Multiple campus</p><br>
+<p>I am both fornetend as well as backend developer.</p><br>
+<p>I have learn language like <span>HTML,CSS,PHP,LARAVEL,MERNSTACK</span>and database like <span> MYSQL,MONGODB AND FIREBASE</span></p><br>
+<p>Apart for coding, some other activites that I love to do!</p>
+<ul>
+  <li>Playing Games</li>
+  <li>Travelling</li>
+  <li>Watching Anime</li>
+</ul>
+<div class="str" style="color:rgb(155, 126, 172);">
+<p>"Strive to build thing that make difference!"</p>
+<p>-Celon Maharjan</p>
 </div>
+</div>
+<img src="./avatar.svg" alt="photo" height="300px" width="400px">
+</div>
+</div>
+<article class="arti">
+  <h1>Professional <span>Skillset</span>  </h1>
+  <div class="logo-container">
+    <img src="./laravel-svgrepo-com.svg" alt="laravel">
+    <img src="./react-svgrepo-com.svg" alt="react">
+    <img src="./javascript-155-svgrepo-com.svg" alt="javascript">
+    <img src="./css3-01-svgrepo-com.svg" alt="css">
+    <img src="./mysql-svgrepo-com.svg" alt="mysql">
+    <img src="./nodejs-svgrepo-com.svg" alt="nodejs">
+    <img src="./php02-svgrepo-com.svg" alt="php">
+    <img src="./react-svgrepo-com.svg" alt="react">
+  </div>
+</article>
 <script>
    let stars = document.getElementById('stars');
      let moon = document.getElementById('moon');
@@ -80,6 +67,7 @@ consequatur perspiciatis repellat unde, eaque totam </p>
            let btn = document.getElementById('btn');
            let header = document.querySelector('header');
               let mountains_front = document.getElementById('mountains_front');
+              let avatar = document.querySelector('img[alt="photo"]');
 
 window.addEventListener('scroll',function(){
     let value = window.scrollY;
@@ -90,6 +78,19 @@ window.addEventListener('scroll',function(){
                text.style.left = value * 1.5 + 'px';
                 header.style.top = value*0.5 +'px';
 })
+
+  avatar.addEventListener('mousemove', function (event) {
+    const imgWidth = avatar.offsetWidth;
+    const imgHeight = avatar.offsetHeight;
+    const angleRange = 15; // max rotation angle in degrees
+    const angleX = (event.offsetY / imgHeight * angleRange) - angleRange / 2;
+    const angleY = (event.offsetX / imgWidth * angleRange) - angleRange / 2;
+    avatar.style.transform = `perspective(500px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+  });
+
+  avatar.addEventListener('mouseleave', function (event) {
+    avatar.style.transform = 'none';
+  });
 </script>
 </body>
 </html>
