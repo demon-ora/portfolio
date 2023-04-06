@@ -304,6 +304,10 @@ main {
 
 }
 
+.container .card a{
+    text-decoration: none;
+}
+
 .container .card::before {
     content: '';
     position: absolute;
@@ -397,4 +401,28 @@ main {
 
 .container .card:nth-child(3) {
     z-index: 1;
+}
+
+
+footer{
+    background: #1c0522;
+    padding:50px;
+}
+
+footer h1{
+    text-align: center;
+    color: blueviolet;
+    padding-bottom: 30px;
+}
+
+footer div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+footer img{
+    height: 40px;
+    width: 40px;
 }
