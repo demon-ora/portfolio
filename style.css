@@ -141,6 +141,7 @@ font-size: 3.5em;
 
 .sec p {
     font-size: 1.2em;
+    /* font-size: clamp(0.4em,1.2em,1.5em); */
 color: rgb(155, 126, 172);
 }
 
@@ -425,4 +426,150 @@ footer div{
 footer img{
     height: 40px;
     width: 40px;
+}
+
+
+@media only screen and (max-width: 900px) {
+.sec p {
+        font-size: 0.8em;
+      
+    }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-right: 40px;
+            padding: 10px;
+    
+        }
+
+                .about img {
+                    background: transparent;
+                    border-radius: 30px;
+                    height: 200px;
+                    width: 300px;
+                }
+        
+                .intro {
+                    line-height: 20px;
+                }
+        
+
+        
+                .intro li {
+                    color: rgb(155, 126, 172);
+                    padding-left: 15px;
+                    font-size: smaller;
+        
+        
+                }
+        
+                .intro li::before {
+                    padding-left: 20px;
+                    content: "\👉";
+                    font-size: smaller;
+                    margin: 10px;
+                }
+        
+                .str {
+                    text-align: center;
+                    margin: 20px;
+                }
+}
+
+
+@media only screen and (max-width: 535px) {
+    .sec p {
+        font-size: 0.6em;
+
+    }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-right: 25px;
+        padding: 7px;
+
+    }
+
+    .about img {
+        background: transparent;
+        border-radius: 30px;
+        height: 150px;
+        width: 200px;
+    }
+
+    .intro {
+        line-height: 15px;
+    }
+
+
+
+    .intro li {
+        color: rgb(155, 126, 172);
+        padding-left: 10px;
+        font-size: xx-small;
+    }
+
+    .intro li::before {
+        padding-left: 10px;
+        content: "\👉";
+        font-size: xx-small;
+        margin: 7px;
+    }
+
+    .str {
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 387px) {
+    .sec p {
+        font-size: 0.4em;
+
+    }
+
+    .about {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-right: 10px;
+        padding: 4px;
+
+    }
+
+    .about img {
+        background: transparent;
+        border-radius: 30px;
+        height: 100px;
+        width: 150px;
+    }
+
+    .intro {
+        line-height: 10px;
+    }
+
+
+
+    .intro li {
+        color: rgb(155, 126, 172);
+        padding-left: 7px;
+        font-size: 0.4em;
+    }
+
+    .intro li::before {
+        padding-left: 7px;
+        content: "\👉";
+        font-size: 0.4em;
+        margin: 4px;
+    }
+
+    .str {
+        text-align: center;
+        margin: 7px;
+    }
 }
